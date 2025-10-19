@@ -1,0 +1,44 @@
+Finance Dashboard - Installation Guide
+=====================================
+
+STEP 1: Extract Files
+----------------------
+You've already extracted the ZIP file!
+
+STEP 2: Configure Environment
+-----------------------------
+cd finance-dashboard
+cp .env.example .env
+
+(Optional: Edit .env to change admin password)
+
+STEP 3: Run with Docker
+-----------------------
+docker-compose up --build
+
+Wait for containers to start (1-2 minutes)
+
+STEP 4: Access Application
+---------------------------
+Open browser: http://localhost:3000
+
+Login with:
+  Username: admin
+  Password: admin123
+
+STEP 5: Upload Data
+-------------------
+1. Click "Upload" in sidebar
+2. Upload Kotak Bank Statement (PDF)
+3. Upload Zerodha Holdings (CSV)
+4. View dashboard analytics!
+
+TROUBLESHOOTING
+---------------
+- Ports busy: Change ports in docker-compose.yml
+- Docker issues: docker-compose down -v && docker-compose up --build
+- Permission errors: sudo chmod -R 755 .
+
+For full documentation, see README.md
+
+Enjoy your Finance Dashboard!
